@@ -27,7 +27,7 @@ SECRET_KEY = 'hj6+0dm%t_fyd0a-)46)n*hlfo7kjxuyll6z!00^ir(vnc-5o_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'luletblogapp.herokuapp.com', 'herokublogapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'luletblogapp.herokuapp.com']
 
 
 # Application definition
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogapp',
-    'herokublogapp',
 ]
 
 MIDDLEWARE = [
