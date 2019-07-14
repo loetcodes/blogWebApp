@@ -17,6 +17,10 @@
     --burgundy_like:#480c25;
     --wheat_like: #f5deb3;
 
+    --body-background: #101421;
+    --post-background: rgba(10, 17, 41, 0.26);
+    --theme-color2: #eed8af;
+
 }
 
 html{
@@ -34,7 +38,9 @@ body {
     background: var(--light_grey, #000);*/
     background-color: black;
     background: var(--dark_blueish, #000);
-    background: linear-gradient(180deg, #181831, #181831, #268280, #164548,#171f34);
+    background: #101421;
+    background: var(--body-background, #eed8af);
+    /*background: linear-gradient(180deg, #181831, #181831, #268280, #164548,#171f34);*/
     color: black; 
     
 }
@@ -145,6 +151,9 @@ p {
     background: var(--dark_blueish, #000);
     background: #000;
     background: #444;
+    background: #0000008c;
+    background: #284c465e;
+    background: rgba(10, 17, 41, 0.26);
     display: grid;
     grid-template-columns: 35% 63%;
     grid-gap: 2%;
@@ -154,11 +163,6 @@ p {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-.post:hover{
-    .post-nav {
-        background: red;
-    }
-}
 
 .post-title {
     margin: auto 10%;
@@ -179,7 +183,7 @@ p {
     grid-gap: 5%;
 }
 
-.post-button {
+.post-button { 
     text-align: right;
     margin: 4% 2%;
     padding: 5% 0%;
@@ -196,4 +200,11 @@ p {
     letter-spacing: 1px;
     border: 1px solid;
     padding: 3%;
+}
+
+.post-nav:hover{
+    background: var(--burgundy_like, black);
+    background: #f5deb3;
+    color: black;
+    
 }
