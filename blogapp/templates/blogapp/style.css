@@ -20,8 +20,13 @@
     --body-background: #101421;
     --post-background: rgba(10, 17, 41, 0.26);
     --post-background: rgb(14, 21, 43);
+
     --theme-color1: rgb(14, 21, 43);
     --theme-color2: #eed8af;
+
+    --text-color1: #f5deb3;
+    --text-color2: #fff;
+
     --faint-text1: rgba(48, 21, 107, 0.3);
     --faint-text2: rgba(68, 68, 68, 0.3);
 
@@ -30,6 +35,7 @@
 html{
 
 }
+
 body {
     margin: 0px;  
     margin-top: 0px;
@@ -57,37 +63,54 @@ p {
 
 
 .title-section {
-    width: 20%;
+    width: 100%;
     position: fixed;
-    z-index: 1;
-    
+    display: flex;
+    z-index: 2;
 }
 
 .title-logo {
     background: #000;
     width: max-content;
-    max-width: 500px;
+    max-width: 250px;
     height: max-content;
-    margin: 3%;
-    /*font-family: 'Allerta Stencil', sans-serif;
-    text-transform: uppercase;
-    font-size: 50px;
-    font-weight: normal;*/
 }
 
 .title {
     font-family: 'Allerta Stencil', sans-serif;
     color: var(--mustard_yellow, #f5deb3);
     color: var(--wheat_like, #f5deb3);
-    margin: 8px;
-    /*font-family: 'Monoton', cursive;*/
+    margin: 0px 8px;
+    padding: 2px;
     text-transform: uppercase;
     font-size: 40px;
     font-weight: normal;
-    /*font-family: 'Monoton', cursive;*/
 }
 
-.page{
+#navigation-bar {
+    width: 75%;
+    height: 100%;
+}
+
+.nav-bar {
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 8px 10px rgba(0, 0, 0, 0.18);
+}
+
+.nav-link {
+    font-size: 1vw;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color1, #fff);
+    margin: auto;
+    padding: 15px;
+
+}
+
+.page {
     margin-top: 0px;
     color: wheat;
     z-index: 0;
@@ -95,7 +118,7 @@ p {
 
 .top-banner {
     background: #000;
-    height: 50vh;
+    height: 100vh;
 }
 
 .banner-text-1 {
@@ -124,14 +147,14 @@ p {
     text-align: right;
     text-transform: uppercase;
     z-index: -1;
-    /*text-shadow: 13px 9px 19px #63606078, 5px 12px 19px #1c193adb;*/
 }
 
 .content-section {
     display: grid;
     width: 100%;
     grid-template-columns: 20% 60% 20%;
-    margin: 5% auto;
+    margin: 10% auto;
+    padding-top: 5%;
 }
 
 .about-section{
@@ -139,29 +162,27 @@ p {
     width: 100%;
     grid-template-columns: 20% 60% 20%;
     margin: 10% auto;
+    padding: 15% 0%;
 }
 
 .section-heading {
     transform: rotate(-90deg);
-    font-size: 12vw;
+    font-size: 10vw;
     color: #2a2d3c;
     text-transform: uppercase;
     position: relative;
     top: 5%;
 }
 
-
 .post-container {
     width: 100%;
     margin: 0 auto;
     grid-column: 2;
     display: grid;
-    /*grid-template-columns: 52% 44%;*/
-    /*grid-gap: 1%;*/
     z-index: 1;
 }
 
-.post {
+.post-card {
     margin: 8% auto;
     min-height: 30em;
     /*padding: 0% 5%;*/
@@ -191,10 +212,6 @@ p {
 .post-details {
     margin: auto 5%;
     margin: auto;
-    /*margin-bottom: 10%;*/
-    /*margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 15%;*/
     width: 85%;
     font-size: 1.2vw;
     line-height: 1.5vw;
@@ -206,7 +223,6 @@ p {
     text-align: right;
     margin: 4% 2%;
     padding: 5% 0%;
-    /*padding-bottom: 1%*/
 
 }
 
@@ -240,7 +256,6 @@ p {
 .social-title {
     margin: 5% auto;
 }
-
 
 .social-media {
     font-size: 1.5vw;
