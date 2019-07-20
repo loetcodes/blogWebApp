@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lulet Blog</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
+</head>
+<body>
+	<header class="title-section">
+		<div class="title-logo">
+			<h1 class="title">d.s</h1>
+		</div>
+		<nav id="navigation-bar" class="nav-bar">
+			<a class="nav-link" href="#home">Home</a>
+			<a class="nav-link" href="#posts">Posts</a>
+			<a class="nav-link" href="#about">About</a>
+			<a class="nav-link" href="#contact">Contact</a>
+		</nav>
+	</header>
+		
+	
+	<main class="page">
+		{% block content %}
+
+		<div id="home" class="top-banner">
+			<div class="banner-text-1">
+				<h2 class="post-title">{{ post.title }}</h2>
+				{% if post.date_published %}
+				<p class="post-date">{{post.date_published|date:'M d Y'}}</p>
+				{% endif %}
+			</div>
+		</div>
+		<div class="content-section">
+			<div class="leftside-bar">
+				
+			</div>
+			<div class="post-container">
+				<p class="post-content">{{post.text|linebreaksbr}}</p>
+				<hr class="line-divider">
+			</div>
+			<div class="rightside-bar"></div>
+		</div>
+
+		{% endblock %}
+
+		<footer class="footer-content">
+			<!-- <nav class="nav-bar">
+				<a class="nav-link" href="#home">Home</a>
+				<a class="nav-link" href="#posts">Posts</a>
+				<a class="nav-link" href="#about">About</a>
+				<a class="nav-link" href="#contact">Contact</a>
+			</nav> -->
+			<!-- <hr class="line-divider"> -->
+			<div class="information">
+				<span>decode space&nbsp;&nbsp;&nbsp;&copy;2019<br><br>Made by Lulets</span>
+				<hr class="line-divider">
+				<div class="social-media">
+					<a class="social-link" href="https://twitter.com/luizoutlets">
+						<img src="{% static 'images/twitter-light-wheat-40px.png' %}" alt="Twitter link">
+					</a>
+					<a class="social-link" href="mailto:luletco@gmail.com">
+						<img src="{% static 'images/mail-light-wheat-40px.png' %}" alt="email link">
+					</a>
+					<a class="social-link" href="https://github.com/lulets">
+						<img src="{% static 'images/github-light-wheat-40px.png' %}" alt="Github link">
+					</a>
+				</div>
+			</div>
+		</footer>
+		
+	</main>
+	</div>
+
+</body>
+</html>

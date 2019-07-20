@@ -1,133 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Lulet Blog</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
-<body>
-	<header class="title-section">
-		<div class="title-logo">
-			<h1 class="title">decode<br>space</h1>
-		</div>
-		<nav id="navigation-bar" class="nav-bar">
-			<a class="nav-link" href="#home">Home</a>
-			<a class="nav-link" href="#posts">Posts</a>
-			<a class="nav-link" href="#about">About</a>
-			<a class="nav-link" href="#contact">Contact</a>
-		</nav>
-	</header>
-		
-	</div>
-	<main class="page">
-		<div class="background-text">
-			<p>Decode<br>Space</p>
-		</div>
-		<div id="home" class="top-banner">
-			<div class="banner-text-1">
-				<p>Transforming virtual thoughts</hp>
-			</div>
-		</div>
-		<div id="posts" class="content-section">
-			<div class="leftside-bar">
-				<h2 class="section-heading">Posts</h2>
-			</div>
-			<div class="post-container">
-				<div class="post-card">
-					<h3 class="post-title">That is not the answer to the function</h3>
-		            <div class="post-details">
-		            	<p>published: 14.06.2014, 12:14<br><br><!-- The random musings of one Louiz brought to you by no one, sponsored by probably negative number of people<br> -->Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis est imperdiet elit laoreet, sit amet efficitur felis molestie. Nunc vitae mattis libero, vitae dignissim libero. Cras quis tellus orci. Curabitur ac ligula at nisi pellentesque tristique. Etiam dapibus eget risus ut aliquam. Quis</p>
-		            	<div class="post-button">
-		            		<a class="post-nav" href="">Read</a>
-		            	</div>
-		            </div>
-		            <!-- <hr> -->
-		        </div>
+{% extends 'blogapp/base.html' %}
 
-		        <div class="post-card">
-		        	<h3 class="post-title">To push or not to push</h3>
-		            <div class="post-details">
-		            	<p>published: 14.06.2014, 12:14<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis est imperdiet elit laoreet, sit amet efficitur felis molestie. Nunc vitae mattis libero, vitae dignissim libero. Cras quis tellus orci. Curabitur ac ligula at nisi pellentesque tristique. Etiam dapibus eget risus ut aliquam. Quis</p>
-		            	<div class="post-button">
-		            		<a class="post-nav" href="">Read</a>
-		            	</div>
-		            </div>
-		            <!-- <hr> -->
-		        </div>
-
-		        <div class="post-card">
-		        	<h3 class="post-title">The Awesome lessons learnt from debugging</h3>
-		            <div class="post-details">
-		            	<p>published: 14.06.2014, 12:14<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis est imperdiet elit laoreet, sit amet efficitur felis molestie. Nunc vitae mattis libero, vitae dignissim libero. Cras quis tellus orci. Curabitur ac ligula at nisi pellentesque tristique. Etiam dapibus eget risus ut aliquam. Quis</p>
-		            	<div class="post-button">
-		            		<a class="post-nav" href="">Read</a>
-		            	</div>
-		            </div>
-		            <!-- <hr> -->
-		        </div>
-
-		        <div class="post-card">
-		        	<h3 class="post-title">That is not the answer to the function</h3>
-		            <div class="post-details">
-		            	<p>published: 14.06.2014, 12:14<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis est imperdiet elit laoreet, sit amet efficitur felis molestie. Nunc vitae mattis libero, vitae dignissim libero. Cras quis tellus orci. Curabitur ac ligula at nisi pellentesque tristique. Etiam dapibus eget risus ut aliquam. Quis</p>
-		            	<div class="post-button">
-		            		<a class="post-nav" href="">Read</a>
-		            	</div>
-		            </div>
-		            <!-- <hr> -->
-		        </div>
-
-		        <div class="post-card">
-		        	<h3 class="post-title">The Awesome lessons learnt from debugging</h3>
-		            <div class="post-details">
-		            	<p>published: 14.06.2014, 12:14<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis est imperdiet elit laoreet, sit amet efficitur felis molestie. Nunc vitae mattis libero, vitae dignissim libero. Cras quis tellus orci. Curabitur ac ligula at nisi pellentesque tristique. Etiam dapibus eget risus ut aliquam. Quis</p>
-		            	<div class="post-button">
-		            		<a class="post-nav" href="">Read</a>
-		            	</div>
-		            </div>
-		            <!-- <hr> -->
-		        </div>
-			</div>
-			<div class="rightside-bar"></div>
-		</div>
-		<div id="about" class="about-section">
-			<div class="leftside-bar">
-				<h2 class="section-heading">About</h2>
-			</div>
+{% block content %}
+	{% for post in posts %}
+		<div class="post-card">
+			<h3 class="post-title">{{post.title}}</h3>
 			<div class="post-details">
-				<p>I am Louisa, a software developer from this version of the universe. I have a passion for computers and tech and see them as the chance to bring one's ideas to life - sort of decode one's ideas.<br><br>In 2017, I decided to leap and officially pursue my passion whilst still working at my full time job! It was the beginning of an exciting journey and I have never looked back. <br><br> In the time that has passed since I wrote my first program I have enjoyed the excitement that accompanies solving a problem and exploration for the sake of exploration, the rollercoaster of learning and unlearning, and the highlights of interacting with an amazing global dev community. I could go on and on about all the stuff that has become possible ever since I stepped into the framework behind computers but im hoping to keep this as short as possible.<br><br>With all that going on and after a great deal of self reflection, I decided to start Decode Space as an outlet for my dev journey. I like to think of it as a space to teach and learn, explore creative, random-crazy and not-so-crazy thoughts, and everything in between. <br><br>Decode Space is about transforming thoughts into reality.
-				</p>
-			</div>
-			<div class="rightside-bar"></div>
-		</div>
-
-		<div id="contact" class="contact-container">
-			<div class="social-title">
-				<h2 class="post-title">Say Hi . . .</h2>
-			</div>
-			<div class="post-details">
-				<p>I'm definitely not going to make you fill some painful form,<br>just drop me a message on any of the links below!!</p>
-			</div>
-			<div class="social-media">
-				<a class="social-link" href="https://twitter.com/luizoutlets">
-					<img src="{% static 'images/twitter-light-wheat-40px.png' %}" alt="Twitter link">
-				</a>
-				<a class="social-link" href="mailto:luletco@gmail.com">
-					<img src="{% static 'images/mail-light-wheat-40px.png' %}" alt="email link">
-				</a>
-				<a class="social-link" href="https://github.com/lulets">
-					<img src="{% static 'images/github-light-wheat-40px.png' %}" alt="Github link">
-				</a>
+				<p>{{post.date_published}}<br><br>{{post.text|truncatewords:"50"}}</p>
+				<div class="post-button">
+					<a class="post-nav" href="{% url 'full_post' pk=post.pk%}">Read</a>
+				</div>
 			</div>
 		</div>
-		<footer>
-			<div class="information">
-				<span>&copy; 2019<br>Made by Lulets</span>
-			</div>
-		</footer>
-		
-	</main>
-	</div>
-
-</body>
-</html>
+	{% endfor %}
+{% endblock %}
