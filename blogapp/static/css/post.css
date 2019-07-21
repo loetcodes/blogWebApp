@@ -47,6 +47,9 @@ body {
     color: black;
     background: white; 
 }
+.title-logo {
+    text-decoration: none;
+}
 
 #navigation-bar {
     /*width: 75%;*/
@@ -75,7 +78,7 @@ body {
     background-image: url('https://cdn.pixabay.com/photo/2017/05/01/22/35/starfield-2276843_960_720.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
 .banner-text-1 {
@@ -133,9 +136,18 @@ body {
 
 .post-button { 
     text-align: right;
-    margin: 4% 2%;
-    padding: 5% 0%;
+    margin: 0%;
+    padding: 2% 0%;
+}
 
+.post-nav {
+    padding: 2%;
+    color: black;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.post-nav:hover {
+    border-color: wheat; 
 }
 
 .contact-container {

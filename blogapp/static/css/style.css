@@ -21,7 +21,7 @@
     --post-background: rgba(10, 17, 41, 0.26);
     --post-background: rgb(14, 21, 43);
 
-    --theme-color1: rgb(14, 21, 43);
+    --theme-color1: #090e31;
     --theme-color2: #eed8af;
 
     --text-color1: #f5deb3;
@@ -51,7 +51,7 @@ body {
     background: var(--dark_blueish, #000);
     background: #101421;
     background: var(--body-background, #eed8af);
-    background: var(--theme-color1, rgb(14, 21, 43));
+    background: var(--theme-color1, #090e31);
     /*background: linear-gradient(180deg, #181831, #181831, #268280, #164548,#171f34);*/
     color: black; 
     
@@ -119,6 +119,9 @@ p {
 .top-banner {
     background: #000;
     height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2017/09/09/12/54/artistic-2731945_960_720.png');
+    background-size: cover;
+    background-position: left;
 }
 
 .banner-text-1 {
@@ -166,10 +169,13 @@ p {
     padding: 15% 0%;
 }
 
+
+
 .leftside-bar .section-heading {
     transform: rotate(-90deg);
     font-size: 10vw;
     color: #2a2d3c;
+    color: #30314e;
     text-transform: uppercase;
     position: relative;
     top: 10%;
@@ -180,6 +186,7 @@ p {
     transform: rotate(90deg);
     font-size: 10vw;
     color: #2a2d3c;
+    color: #30314e;
     text-transform: uppercase;
     position: relative;
     top: 0%;
@@ -224,7 +231,6 @@ p {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.4);
 }
 
-
 .post-title {
     margin: auto 10%;
     font-size: 4vw;
@@ -239,6 +245,15 @@ p {
     line-height: 1.5vw;
     display: grid;
     grid-gap: 5%;
+}
+
+.about-card {
+    min-height: 30em;
+    padding: 8% 0%;
+    background: rgba(10, 17, 41, 0.9);
+    width: 100%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.4);
+
 }
 
 .post-button { 
@@ -256,6 +271,7 @@ p {
     font-size: 1.5vw;
     letter-spacing: 1px;
     border: 1px solid;
+    border-radius: 5px;
     padding: 3%;
 }
 
