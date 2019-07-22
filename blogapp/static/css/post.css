@@ -52,13 +52,11 @@ body {
 }
 
 #navigation-bar {
-    /*width: 75%;*/
     height: max-content;
 }
 
 .nav-bar {
     box-shadow: none;
-    /*width: 60%;*/
 }
 
 .nav-link {
@@ -78,7 +76,6 @@ body {
     background-image: url('https://cdn.pixabay.com/photo/2017/05/01/22/35/starfield-2276843_960_720.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .banner-text-1 {
@@ -110,6 +107,11 @@ body {
     display: grid;
     z-index: 1;
     font-size: 18px;
+}
+
+.post-content {
+    letter-spacing: initial;
+    word-spacing: 1px;
 }
 
 .post-title {
@@ -148,6 +150,18 @@ body {
 
 .post-nav:hover {
     border-color: wheat; 
+}
+
+.edit-view {
+    width: 80%;
+    margin: 10% auto;
+    padding-top: 5%;
+    font-family: 'Literata', serif;
+    color: black;
+}
+
+.post-form {
+    
 }
 
 .contact-container {

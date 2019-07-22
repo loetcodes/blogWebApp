@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lulet Blog</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
+</head>
+<body>
+	<header class="title-section">
+		<a class="title-logo" href="{% url 'post_list'%}#home">
+			<h1 class="title">d.s</h1>
+		</a>
+		<nav id="navigation-bar" class="nav-bar">
+			<a class="nav-link" href="{% url 'post_list'%}#home">Home</a>
+			<a class="nav-link" href="{% url 'post_list'%}#posts">Posts</a>
+			<a class="nav-link" href="{% url 'post_list'%}#about">About</a>
+			<a class="nav-link" href="#contact">Contact</a>
+		</nav>
+	</header>
+		
+	
+	<main class="page">
+		{% block content %}
+
+		{% endblock %}
+		<!-- <div class="post-button">
+			<a class="post-nav" href="#top">Back to top</a>
+		</div> -->
+
+		<footer class="footer-content">
+			<!-- <nav class="nav-bar">
+				<a class="nav-link" href="#home">Home</a>
+				<a class="nav-link" href="#posts">Posts</a>
+				<a class="nav-link" href="#about">About</a>
+				<a class="nav-link" href="#contact">Contact</a>
+			</nav> -->
+			<!-- <hr class="line-divider"> -->
+			<div id="contact" class="information">
+				<span>decode space&nbsp;&nbsp;&nbsp;&copy;2019<br><br>Made by Lulets</span>
+				<hr class="line-divider">
+				<div class="social-media">
+					<a class="social-link" href="https://twitter.com/luizoutlets" name="twitter">
+						<img src="{% static 'images/twitter-light-wheat-40px.png' %}" alt="Twitter link">
+					</a>
+					<a class="social-link" href="mailto:luletco@gmail.com" name="mail">
+						<img src="{% static 'images/mail-light-wheat-40px.png' %}" alt="email link">
+					</a>
+					<a class="social-link" href="https://github.com/lulets" name="github">
+						<img src="{% static 'images/github-light-wheat-40px.png' %}" alt="Github link">
+					</a>
+				</div>
+			</div>
+		</footer>
+	</main>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'blogapp/post_base.html' %}
+
+{% block content %}
+	<div id="top" class="top-banner">
+		<div class="banner-text-1">
+			<h2 class="post-title">New Post</h2>
+		</div>
+	</div>
+	<div class="edit-view">
+		<form method="POST" class="post-form">{% csrf_token %}
+			{{ form.as_p}}
+			<button type="submit" class="save btn">Save</button>
+		</form>
+	</div>
+
+{% endblock %}

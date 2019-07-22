@@ -30,7 +30,9 @@
 		</div>
 		<div id="posts" class="content-section">
 			<div class="leftside-bar">
-				<!-- <h2 class="section-heading">Posts</h2> -->
+				<a href="{% url 'post_new' %}" class="new-post-link" target="_blank">
+					<img src="{% static 'images/wheat_plus_sign_50x50px.png' %}" alt="plus sign">
+				</a>
 			</div>
 			<div class="post-container">
 				{% block content %}
@@ -45,7 +47,7 @@
 				<!-- <h2 class="section-heading">About</h2> -->
 			</div>
 			<div class="about-card">
-				<p class="post-details">I am Louisa, a software developer from this version of the universe. I have a passion for computers and tech and see them as the chance to bring one's ideas to life - sort of decode one's ideas.<br><br>In 2017, I decided to leap and officially pursue my passion whilst still working at my full time job! It was the beginning of an exciting journey and I have never looked back. <br><br> In the time that has passed since I wrote my first program I have enjoyed the excitement that accompanies solving a problem and exploration for the sake of exploration, the rollercoaster of learning and unlearning, and the highlights of interacting with an amazing global dev community. I could go on and on about all the stuff that has become possible ever since I stepped into the framework behind computers but im hoping to keep this as short as possible.<br><br>With all that going on and after a great deal of self reflection, I decided to start Decode Space as an outlet for my dev journey. I like to think of it as a space to teach and learn, explore creative, random-crazy and not-so-crazy thoughts, and everything in between. <br><br>Decode Space is about transforming thoughts into reality.
+				<p class="post-details">I am Louisa, a software developer from this version of the universe. I have a passion for computers and tech and see them as the chance to bring one's ideas to life - sort of decode one's ideas.<br><br><br>In 2017, I decided to leap and officially pursue my passion whilst still working at my full time job! It was the beginning of an exciting journey and I have never looked back. <br><br><br> In the time that has passed since I wrote my first program I have enjoyed the excitement that accompanies solving a problem and exploration for the sake of exploration, the rollercoaster of learning and unlearning, and the highlights of interacting with an amazing global dev community. I could go on and on about all the stuff that has become possible ever since I stepped into the framework behind computers but im hoping to keep this as short as possible.<br><br><br>With all that going on and after a great deal of self reflection, I decided to start Decode Space as an outlet for my dev journey. I like to think of it as a space to teach and learn, explore creative, random-crazy and not-so-crazy thoughts, and everything in between. <br><br><br>Decode Space is about transforming thoughts into reality.
 				</p>
 			</div>
 			<div class="rightside-bar">
@@ -61,13 +63,13 @@
 				<p>I'm definitely not going to make you fill some painful form,<br>just drop me a message on any of the links below!!</p>
 			</div>
 			<div class="social-media">
-				<a class="social-link" href="https://twitter.com/luizoutlets">
+				<a class="social-link" href="https://twitter.com/luizoutlets" name="twitter">
 					<img src="{% static 'images/twitter-light-wheat-40px.png' %}" alt="Twitter link">
 				</a>
-				<a class="social-link" href="mailto:luletco@gmail.com">
+				<a class="social-link" href="mailto:luletco@gmail.com" name="mail">
 					<img src="{% static 'images/mail-light-wheat-40px.png' %}" alt="email link">
 				</a>
-				<a class="social-link" href="https://github.com/lulets">
+				<a class="social-link" href="https://github.com/lulets" name="github">
 					<img src="{% static 'images/github-light-wheat-40px.png' %}" alt="Github link">
 				</a>
 			</div>
