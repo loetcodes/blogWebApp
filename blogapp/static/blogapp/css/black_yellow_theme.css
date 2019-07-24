@@ -226,7 +226,7 @@ p {
     font-size: 1.2vw;
     line-height: 1.5vw;
     display: grid;
-    grid-gap: 5%;
+    grid-gap: 10%;
 }
 
 .about-card {
@@ -241,7 +241,9 @@ p {
 .post-button { 
     text-align: right;
     margin: 4% 2%;
+    margin-bottom: 0%;
     padding: 5% 0%;
+    padding-bottom: 0%;
 
 }
 
@@ -252,14 +254,13 @@ p {
     font-weight: 900;
     font-size: 1.5vw;
     letter-spacing: 1px;
-    border: 1px solid;
+    /*border: 1px solid;*/
     border-radius: 5px;
     padding: 3%;
 }
 
 .post-nav:hover{
-    background: var(--burgundy_like, black);
-    background: #f5deb3;
+    background: var(--nav-link-hover, rgb(167, 115, 13));
     color: black;   
 }
 
