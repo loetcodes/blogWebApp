@@ -4,31 +4,20 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 * {
-    --dark_purple: #3c364e;
-    --mustard_yellow: #cc9832;
-    --light_grey: #9e9e9e;
-    --medium_grey: #b1b1b1;
-    --dark_grey: #0d0c48;
-    --blackish_purple:#17092b;
-    --dark_purple: #1c193af0;
-    --dark_blue: #0d0c48;
-    --medium_navy:#1c193a;
-    --dark_blueish: #181831;
-    --burgundy_like:#480c25;
-    --wheat_like: #f5deb3;
 
-    --body-background: #101421;
-    --post-background: rgba(10, 17, 41, 0.26);
-    --post-background: rgb(14, 21, 43);
+    /*dark theme yellow, black and grey*/
+    --body-background: #000000f0;
+    --body-linear-background: linear-gradient(#000,#0a0a0a,#151517db,#000000e0);
+    --tile-background: rgba(19, 18, 17, 0.78);
+    --nav-box-shadow: 0px 5px 23px -12px rgba(245, 222, 179, 0.11);
 
-    --theme-color1: #090e31;
-    --theme-color2: #eed8af;
+    /*Text color variable properties*/
+    --title-color: rgb(199, 143, 35, 1);
+    --section-title-col: rgba(167, 115, 13, 0.77); /*mustard -yellow opacity of 0.79*/
+    --text-color: rgb(245, 222, 179); /*wheat-like: #f5deb3*/
+    --nav-link-col: rgb(245, 222, 179);
+    --nav-link-hover: rgb(167, 115, 13);
 
-    --text-color1: #f5deb3;
-    --text-color2: #fff;
-
-    --faint-text1: rgba(48, 21, 107, 0.3);
-    --faint-text2: rgba(68, 68, 68, 0.3);
 
 }
 
@@ -43,16 +32,7 @@ body {
     flex-direction: column;
     font-size: 1vw;
     font-family: "Roboto Condensed", sans-serif;
-    /*background: var(--dark_blue, #000);
-    background: var(--dark_purple, #000);
-    background: var(--dark_grey, #000);
-    background: var(--light_grey, #000);*/
-    background-color: black;
-    background: var(--dark_blueish, #000);
-    background: #101421;
-    background: var(--body-background, #eed8af);
-    background: var(--theme-color1, #090e31);
-    /*background: linear-gradient(180deg, #181831, #181831, #268280, #164548,#171f34);*/
+    background-color: var(--body-background, #000000f0);
     color: black; 
     
 }
@@ -78,8 +58,7 @@ p {
 
 .title {
     font-family: 'Allerta Stencil', sans-serif;
-    color: var(--mustard_yellow, #f5deb3);
-    color: var(--wheat_like, #f5deb3);
+    color: var(--title-color, rgb(199, 143, 35, 1));
     margin: 0px 10px;
     padding: 4px;
     text-transform: none;
@@ -97,6 +76,7 @@ p {
     display: flex;
     justify-content: space-evenly;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 8px 10px rgba(0, 0, 0, 0.18);
+    box-shadow: var(--nav-box-shadow, 0px 5px 23px -12px ,rgba(245, 222, 179, 0.11));
 }
 
 .nav-link {
@@ -105,9 +85,13 @@ p {
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--text-color1, #fff);
+    color: var(--nav-link-col, rgb(245, 222, 179));
     margin: auto;
     padding: 15px;
+}
+
+.nav-link:hover {
+    color: var(--nav-link-hover, rgb(167, 115, 13)) ;
 }
 
 .page {
@@ -175,7 +159,7 @@ p {
     transform: rotate(-90deg);
     font-size: 10vw;
     color: #2a2d3c;
-    color: #30314e;
+    color: var(--section-title-col,rgba(167, 115, 13, 0.77));
     text-transform: uppercase;
     position: relative;
     top: 10%;
@@ -186,7 +170,7 @@ p {
     transform: rotate(90deg);
     font-size: 10vw;
     color: #2a2d3c;
-    color: #30314e;
+    color: var(--section-title-col,rgba(167, 115, 13, 0.77));
     text-transform: uppercase;
     position: relative;
     top: 0%;
@@ -212,27 +196,25 @@ p {
 }
 
 .post-card {
-    margin: 8% auto;
+    /*margin: 8% auto; *//*changed 23july*/
+    margin: 10% auto;
     min-height: 30em;
     /*padding: 0% 5%;*/
-    background: #000;
-    background: var(--dark_blueish, #000);
     background: #000;
     background: #444;
     background: #0000008c;
     background: #284c465e;
-    background: rgba(10, 17, 41, 0.9);
+    background: rgba(19, 18, 17, 0.78);
     display: grid;
-    grid-template-columns: 35% 63%;
-    grid-gap: 2%;
+    /*grid-template-columns: 35% 63%;
+    grid-gap: 2%;*/ /*changed 23july*/
+    grid-template-columns: 40% 60%;
     width: 100%;
-    box-shadow: 0px 0px 31px 0px #00000075;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.4);
 }
 
 .post-title {
-    margin: auto 10%;
+    margin: auto 8%;
     font-size: 4vw;
     letter-spacing: -3.9px;
 }
@@ -250,9 +232,9 @@ p {
 .about-card {
     min-height: 30em;
     padding: 8% 0%;
-    background: rgba(10, 17, 41, 0.9);
+    background: rgb(3, 3, 3);
     width: 100%;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0px 10px 24px -1px rgba(0,0,0,0.4);
 
 }
 
