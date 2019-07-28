@@ -13,11 +13,11 @@
 
     /*Text color variable properties*/
     --title-color: rgb(199, 143, 35, 1);
-    --section-title-col: rgba(167, 115, 13, 0.77); /*mustard -yellow opacity of 0.79*/
-    --post-title-col: rgba(167, 115, 13);
+    --section-title-col: #950740; /*pink*/
+    --post-title-col: #950740;
     --text-color: rgb(245, 222, 179); /*wheat-like: #f5deb3*/
     --nav-link-col: rgb(245, 222, 179);
-    --nav-link-hover: rgb(167, 115, 13);
+    --nav-link-hover: #950740;
 
 
 }
@@ -91,7 +91,7 @@ p {
     padding: 15px;
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover {
     color: var(--nav-link-hover, rgb(167, 115, 13)) ;
 }
 
@@ -234,7 +234,7 @@ p {
 .about-card {
     min-height: 30em;
     padding: 8% 0%;
-    background: rgb(30, 30, 30);
+    background: rgb(3, 3, 3);
     width: 100%;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0px 10px 24px -1px rgba(0,0,0,0.4);
 
@@ -256,15 +256,15 @@ p {
     font-weight: 900;
     font-size: 1.5vw;
     letter-spacing: 1px;
-    border: solid 1px transparent;
+    /*border: 1px solid;*/
     border-radius: 5px;
     padding: 3%;
 }
 
-.post-nav:hover, .post-nav:focus {
-    color: var(--nav-link-hover, rgb(167, 115, 13));  
+.post-nav:hover{
+    background: var(--nav-link-hover, rgb(167, 115, 13));
+    color: black;   
 }
-
 
 .contact-container {
     width: 60%;
