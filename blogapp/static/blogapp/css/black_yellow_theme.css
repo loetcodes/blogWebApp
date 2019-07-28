@@ -14,6 +14,7 @@
     /*Text color variable properties*/
     --title-color: rgb(199, 143, 35, 1);
     --section-title-col: rgba(167, 115, 13, 0.77); /*mustard -yellow opacity of 0.79*/
+    --post-title-col: rgba(167, 115, 13);
     --text-color: rgb(245, 222, 179); /*wheat-like: #f5deb3*/
     --nav-link-col: rgb(245, 222, 179);
     --nav-link-hover: rgb(167, 115, 13);
@@ -217,6 +218,7 @@ p {
     margin: auto 8%;
     font-size: 4vw;
     letter-spacing: -3.9px;
+    color: var(--post-title-col);
 }
 
 .post-details {
