@@ -146,16 +146,6 @@ p {
     padding-bottom: 5%;
 }
 
-.about-section{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 20% 60% 20%;
-    margin: 10% auto;
-    padding: 15% 0%;
-}
-
-
-
 .leftside-bar .section-heading {
     transform: rotate(-90deg);
     font-size: 10vw;
@@ -173,8 +163,8 @@ p {
     color: #2a2d3c;
     color: var(--section-title-col,rgba(167, 115, 13, 0.77));
     text-transform: uppercase;
-    position: relative;
-    top: 0%;
+    position: sticky;
+    top: 20%;
     left: 20%;
 }
 
@@ -231,14 +221,33 @@ p {
     grid-gap: 10%;
 }
 
+.about-section{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 60% 20%;
+    margin: 10% auto;
+    padding: 15% 0%;
+}
+
 .about-card {
     min-height: 30em;
     padding: 8% 0%;
     background: rgb(30, 30, 30);
     width: 100%;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0px 10px 24px -1px rgba(0,0,0,0.4);
-
 }
+
+.about-section .section-heading {
+    transform: rotate(90deg);
+    font-size: 10vw;
+    color: #2a2d3c;
+    color: var(--section-title-col,rgba(167, 115, 13, 0.77));
+    text-transform: uppercase;
+    position: relative;
+    top: 0%;
+    left: 20%;
+}
+
 
 .post-button { 
     text-align: right;
